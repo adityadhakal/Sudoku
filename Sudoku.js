@@ -65,9 +65,6 @@ function family(index)
 			temp_cols[counter++] = cord1;
 		}
 	}
-<<<<<<< HEAD
-	
-	
 	//Now for the 'a' numbers in the grid.
 	//we can get the numbers back by throwing all the stuff and checking if the already exists
 	// first find in which box the input lies
@@ -207,4 +204,3 @@ function family(index)
 		
 		return return_array;
 }
->>>>>>> 4de6997f438caf0b8e28265f9f0c370769912b2a
