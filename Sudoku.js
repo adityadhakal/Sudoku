@@ -66,3 +66,62 @@ function family(index)
 		}
 	}
 	
+	//Now for the 'a' numbers in the grid.
+	//we can get the numbers back by throwing all the stuff and checking if the already exists
+	// first find in which box the input lies
+	// into boxes of 3 cols and 3 rows
+	
+	var row_position;
+	var col_position;
+	
+	//Finding the row position
+	if(row<3)
+	{
+		row_position = 1;
+	}
+	if(row<6 && row>=3)
+	{
+		row_position = 2;
+	}
+	if(row>6)
+	{
+		row_position = 3;
+	}
+	
+	//Finding the column position
+	if(col<3)
+	{
+		col_position = 1;	
+	}
+	
+	if(col<6 && col>=3)
+	{
+		col_position = 2;
+	}
+	if(col>6)
+	{
+		col_position = 3;
+	}
+	//now the row and columns are found..
+	//like below
+	
+	// 11|12|13
+	// --------
+	// 21|22|23
+	// --------
+	// 31|32|33
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
