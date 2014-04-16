@@ -65,4 +65,4 @@ function family(index)
 			temp_cols[counter++] = cord1;
 		}
 	}
-	
+	//now for the member of it's group (the 4) that are not intersected by the lines
