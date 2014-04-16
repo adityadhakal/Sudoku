@@ -65,4 +65,146 @@ function family(index)
 			temp_cols[counter++] = cord1;
 		}
 	}
-	//now for the member of it's group (the 4) that are not intersected by the lines
+<<<<<<< HEAD
+	
+	
+	//Now for the 'a' numbers in the grid.
+	//we can get the numbers back by throwing all the stuff and checking if the already exists
+	// first find in which box the input lies
+	// into boxes of 3 cols and 3 rows
+	
+	var row_position;
+	var col_position;
+	
+	//Finding the row position
+	if(row<3)
+	{
+		row_position = 1;
+	}
+	if(row<6 && row>=3)
+	{
+		row_position = 2;
+	}
+	if(row>6)
+	{
+		row_position = 3;
+	}
+	
+	//Finding the column position
+	if(col<3)
+	{
+		col_position = 1;	
+	}
+	
+	if(col<6 && col>=3)
+	{
+		col_position = 2;
+	}
+	if(col>6)
+	{
+		col_position = 3;
+	}
+	//now the row and columns are found..
+	//like below
+	
+	// 11|12|13
+	// --------
+	// 21|22|23
+	// --------
+	// 31|32|33
+	
+	// 11 includes 00,01,02,....,10,11,12,....,20,21,22
+	// 12 includes 03,04,05,....,13,14,15,....,23,24,25
+	// and so on
+	
+	var position_box = row_position.toString()+col_position.toString();// the box the input is in
+	
+	var temp_rest = new Array(4);// we will store the numbers in same box in this array
+	
+	//demiliting array
+	var row_left;
+	var row_right;
+	var col_top;
+	var col_bottom;
+	
+	//for all boxes
+	switch(position_box)
+	{
+		case "11":
+			row_left = 0;
+			row_right = 2;
+			col_top = 0;
+			col_bottom = 2;
+			break;
+		case "12":
+			row_left = 3;
+			row_right = 5;
+			col_top = 0;
+			col_bottom = 2;
+			break;
+		case "13":
+			row_left = 6;
+			row_right = 8;
+			col_top = 0;
+			col_bottom = 2;
+			break;
+		case "21":
+			row_left = 0;
+			row_right = 2;
+			col_top = 3;
+			col_bottom = 5;
+			break;
+		case "22":
+			row_left = 3;
+			row_right = 5;
+			col_top = 3;
+			col_bottom = 5;
+			break;
+		case "23":
+			row_left = 6;
+			row_right = 8;
+			col_top = 3;
+			col_bottom = 5;
+			break;
+		case "31":
+			row_left = 0;
+			row_right = 2;
+			col_top = 6;
+			col_bottom = 8;
+			break;
+		case "32":
+			row_left = 3;
+			row_right = 5;
+			col_top = 6;
+			col_bottom = 8;
+			break;
+		case "33":
+			row_left = 6;
+			row_right = 8;
+			col_top = 6;
+			col_bottom = 8;
+			break;
+		default:
+			document.write("Some Error in dividing into groups");
+	}
+	
+		//Now putting stuff in the array
+		counter = 0;
+		for(var i = row_left; i<=row_right;i++)
+		{
+			for(var j = col_top; j<=col_bottom;j++)
+			{
+				if(i != row && j != col)//Filtering the data so we only send the 4 needed
+				{
+					temp_rest[counter++] = i.toString()+j.toString();
+				}
+			}
+		}
+		
+		//Now concatenating all 20 family members of the index we sent
+		
+		var return_array = temp_row.concat(temp_cols,temp_rest);
+		
+		return return_array;
+}
+>>>>>>> 4de6997f438caf0b8e28265f9f0c370769912b2a
